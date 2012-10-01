@@ -1,0 +1,11 @@
+[core]
+	excludesfile = ~/.gitignore
+[user]
+	name = Toni Cebrián
+	email = ancechu@gmail.com
+[alias]
+    co = checkout
+    st = status
+    ci = commit
+[color]
+	ui = true
