@@ -1,0 +1,10 @@
+Basic configuration for a Linux user.
+
+Unless stated otherwise, all files and directories in this folder have to be
+copied in $HOME putting a . before the name in order to convert them to
+invisible.
+
+For instance:
+
+cp -r config/* $HOME/.config
+
