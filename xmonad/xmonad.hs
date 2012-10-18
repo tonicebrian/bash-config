@@ -2,6 +2,7 @@ import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ICCCMFocus
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
@@ -66,7 +67,7 @@ myLayout = toggleLayouts (avoidStruts $ Full) normalLayout
 -- Main executable 
 main = do
     xmproc <- spawnPipe "xmobar /home/tcebrian/.xmobarrc"
-    xmonad $ withUrgencyHook NoUrgencyHook $ defaultConfig
+    xmonad $ ewmh $ withUrgencyHook NoUrgencyHook $ defaultConfig
         { manageHook = manageDocks <+> myManageHook <+> manageHook defaultConfig 
         , keys = newKeys
         , workspaces = myWorkspaces 
