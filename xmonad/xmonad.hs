@@ -66,7 +66,7 @@ myLayout = toggleLayouts (avoidStruts $ Full) normalLayout
 
 -- Main executable 
 main = do
-    xmproc <- spawnPipe "xmobar /home/tcebrian/.xmobarrc"
+    xmproc <- spawnPipe "xmobar $HOME/.xmobarrc"
     xmonad $ ewmh $ withUrgencyHook NoUrgencyHook $ defaultConfig
         { manageHook = manageDocks <+> myManageHook <+> manageHook defaultConfig 
         , keys = newKeys
