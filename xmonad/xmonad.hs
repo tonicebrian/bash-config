@@ -52,7 +52,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) =
               , ((modm .|. controlMask, xK_Down ), sendMessage $ Swap D)           
               -- Togle Fullscreen
               , ((modm,                 xK_f    ), sendMessage ToggleLayout)
-              , ((modm,                 xK_p        ), spawn "dmenu_run")
+              , ((modm,                 xK_d        ), spawn "dmenu_run")
               ]
 
 -- Define the default layout
