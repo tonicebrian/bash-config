@@ -4,7 +4,7 @@
 /usr/lib/gnome-settings-daemon/gnome-fallback-mount-helper &
 
 xrdb -merge .Xresources
-xmodmap .Xmodmap
+xmodmap $HOME/.Xmodmap
 
 trayer --edge top --align right --SetDockType true --expand true --width 15 --height 18 --transparent true --tint 0x000000 &
 
@@ -20,5 +20,8 @@ fi
 /usr/bin/gnome-volume-control-applet &
 dropbox start &
 gajim &
+
+# Fast terminal anywhere
+guake &
 
 exec xmonad
