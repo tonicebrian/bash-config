@@ -19,7 +19,6 @@ fi
  
 /usr/bin/gnome-volume-control-applet &
 dropbox start &
-gajim &
 
 # Fast terminal anywhere
 guake &

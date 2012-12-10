@@ -7,5 +7,6 @@
     co = checkout
     st = status
     ci = commit
+    lg = log --oneline --graph
 [color]
 	ui = true

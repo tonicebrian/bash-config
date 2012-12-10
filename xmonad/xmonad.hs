@@ -26,6 +26,7 @@ myManageHook = composeAll
                 , className =? "Pidgin"        --> doShift "4:skype"
                 , className =? "Gajim"         --> doShift "4:skype"
                 , className =? "Thunderbird"   --> doShift "6:mail"
+                , className =? "Firefox"       --> doShift "3:web"
                 , className =? "Unity-2d-panel" --> doIgnore
                 ]
 
