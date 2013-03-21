@@ -4,3 +4,4 @@ dist/
 target
 .history
 *.iml
+atlassian-ide-plugin.xml
