@@ -7,6 +7,10 @@ export PROMPT_DIRTRIM=4
 # ln -s ~/GIT/bash-config/dircolors.ansi-dark $HOME/.dircolors
 eval `dircolors $HOME/.dircolors`
 
+# Solve problems with colors in tmux
+alias tmux="TERM=screen-256color-bce tmux"
+
+
 # Additions based on this blog post http://www.terminally-incoherent.com/blog/2013/01/14/whats-in-your-bash-prompt/
 
 Color_Off="\033[0m"
