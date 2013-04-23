@@ -53,3 +53,8 @@ function __prompt_command()
     PS1+="\$ "
 }
 PROMPT_COMMAND=__prompt_command
+
+# Check for local configuration
+if [ -f ~/.bash.local ]; then
+    . ~/.bash.local
+fi
