@@ -3,6 +3,9 @@ export PATH=$PATH:$HOME/bin:$HOME/.cabal/bin:$HOME/.local/bin
 # Trim the folder structure when we are deep enough
 export PROMPT_DIRTRIM=4
 
+# Meaningful error results
+export LANG=en_EN.utf8
+
 # Use the dircolors that work with solarized
 # ln -s ~/GIT/bash-config/dircolors.ansi-dark $HOME/.dircolors
 eval `dircolors $HOME/.dircolors`
