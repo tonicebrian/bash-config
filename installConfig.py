@@ -33,3 +33,5 @@ link_file("git-completion.bash",True)
 link_file("xmobarrc",True)
 link_file("Xmodmap",True)
 link_file("xsession",True)
+
+link_file("dircolors",True)
