@@ -10,16 +10,19 @@
 	cp = cherry-pick -x
 	unstage = reset HEAD
 	uncommit = reset --soft HEAD^
+	bdesc = config
 
 [color]
 	ui = true
 
 [giggle]
 	main-window-maximized = false
-	main-window-geometry = 1278x1005+0+17
+	main-window-geometry = 638x1005+0+17
 	history-view-vpane-position = 597
 	main-window-view = HistoryView
 	file-view-vpane-position = 905
 
 [merge]
 	summary=true
+[push]
+	default = current
