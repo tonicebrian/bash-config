@@ -1,4 +1,5 @@
-core.excludesfiles = ~/.gitignore
+[core]
+    excludesfiles = ~/.gitignore
 [user]
 	name = Toni Cebrián
 	email = ancechu@gmail.com
