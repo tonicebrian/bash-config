@@ -39,6 +39,9 @@ link_file("dircolors")
 
 link_file("minttyrc.dark",".minttyrc")
 
+# Change colors in gnome-terminal
+os.system("./gnome-terminal-colors-solarized/install.sh -s dark -p Default")
+
 option = raw_input("Is this a Cygwin environment? ([y]/n): ")
 if option == 'y' or option == 'Y':
 	cmd = "cat " + git_dir + "/sol.dark >> " + home_dir + "/.bash.local"
