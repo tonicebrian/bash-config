@@ -6,3 +6,7 @@ target
 *.iml
 atlassian-ide-plugin.xml
 *.pyc
+lib_managed
+.classpath
+.project
+.settings
