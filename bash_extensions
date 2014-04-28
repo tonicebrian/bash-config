@@ -1,10 +1,5 @@
 export PATH=$PATH:$HOME/bin:$HOME/.cabal/bin:$HOME/.local/bin
 
-# Append instead of overwrite the history
-shopt -s histappend
-
-export PROMPT_COMMAND="$PROMPT_COMMAND;history -a;history -n"
-
 # Trim the folder structure when we are deep enough
 export PROMPT_DIRTRIM=4
 
@@ -17,6 +12,8 @@ eval `dircolors $HOME/.dircolors`
 
 # Solve problems with colors in tmux
 alias tmux="TERM=screen-256color-bce tmux"
+
+alias ls="ls --color=auto"
 
 
 # Additions based on this blog post http://www.terminally-incoherent.com/blog/2013/01/14/whats-in-your-bash-prompt/
