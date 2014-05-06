@@ -23,6 +23,10 @@ def link_file(filename, target_filename = None, hide_file=False):
 	os.symlink(git_dir + "/" + filename,target_filename)
 
 
+# Initialize submodules
+os.system("git submodule init")
+os.system("git submodule update")
+
 # Copy the configuration
 link_file("gitignore")
 link_file("gitconfig")
