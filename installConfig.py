@@ -55,10 +55,13 @@ if dist == 'fedora':
 os.system("./gnome-terminal-colors-solarized/install.sh -s dark -p {0}".format(profile))
 
 # Execute the remapping of the keyboard
-os.system("xmodmap ~/.Xmodmap")
+os.system("echo xmodmap ~/.Xmodmap >> ~/.bashrc")
+os.system("echo source .bash_extensions >> ~/.bashrc")
 
 option = raw_input("Is this a Cygwin environment? ([y]/n): ")
 if option == 'y' or option == 'Y':
 	cmd = "cat " + git_dir + "/sol.dark >> " + home_dir + "/.bash.local"
 	print cmd
-	#os.system(cmd)
+	os.system(cmd)
+
+
