@@ -24,8 +24,7 @@ def link_file(filename, target_filename = None, hide_file=False):
 
 
 # Initialize submodules
-os.system("git submodule init")
-os.system("git submodule update")
+os.system("git submodule update --init --recursive")
 
 # Copy the configuration
 link_file("gitignore")
@@ -43,8 +42,17 @@ link_file("dircolors")
 
 link_file("minttyrc.dark",".minttyrc")
 
+link_file("vim")
+link_file("emacs.d")
+
 # Change colors in gnome-terminal
-os.system("./gnome-terminal-colors-solarized/install.sh -s dark -p Default")
+import platform
+dist=platform.dist()[0].lower()
+profile='Default'
+if dist == 'fedora':
+    profile='Unnamed'
+
+os.system("./gnome-terminal-colors-solarized/install.sh -s dark -p {0}".format(profile))
 
 # Execute the remapping of the keyboard
 os.system("xmodmap ~/.Xmodmap")
