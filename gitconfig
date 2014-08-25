@@ -3,7 +3,6 @@
 	autocrlf = input
 [user]
 	name = Toni Cebrián
-	email = ancechu@gmail.com
 [alias]
     co = checkout
     st = status --ignore-submodules=dirty
