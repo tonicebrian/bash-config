@@ -23,6 +23,9 @@ def link_file(filename, target_filename = None, hide_file=False):
 	os.symlink(git_dir + "/" + filename,target_filename)
 
 
+# Initialize submodules
+os.system("git submodule update --init --recursive")
+
 # Copy the configuration
 link_file("gitignore")
 link_file("gitconfig")
@@ -36,3 +39,29 @@ link_file("Xmodmap")
 link_file("xsession")
 
 link_file("dircolors")
+
+link_file("minttyrc.dark",".minttyrc")
+
+link_file("vim")
+link_file("emacs.d")
+
+# Change colors in gnome-terminal
+import platform
+dist=platform.dist()[0].lower()
+profile='Default'
+if dist == 'fedora':
+    profile='Unnamed'
+
+os.system("./gnome-terminal-colors-solarized/install.sh -s dark -p {0}".format(profile))
+
+# Execute the remapping of the keyboard
+os.system("echo xmodmap ~/.Xmodmap >> ~/.bashrc")
+os.system("echo source .bash_extensions >> ~/.bashrc")
+
+option = raw_input("Is this a Cygwin environment? ([y]/n): ")
+if option == 'y' or option == 'Y':
+	cmd = "cat " + git_dir + "/sol.dark >> " + home_dir + "/.bash.local"
+	print cmd
+	os.system(cmd)
+
+

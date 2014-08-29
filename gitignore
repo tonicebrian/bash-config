@@ -9,3 +9,6 @@ atlassian-ide-plugin.xml
 lib_managed
 .cabal-sandbox
 cabal.sandbox*
+.classpath
+.project
+.settings

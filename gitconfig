@@ -1,11 +1,12 @@
 [core]
-	excludesfile = ~/.gitignore
+    excludesfiles = ~/.gitignore
+	autocrlf = input
 [user]
 	name = Toni Cebrián
 	email = ancechu@gmail.com
 [alias]
     co = checkout
-    st = status
+    st = status --ignore-submodules=dirty
     ci = commit
     lg = log --oneline --graph
 	cp = cherry-pick -x
