@@ -5,23 +5,26 @@ home_dir = os.environ.get("HOME")
 git_dir = os.getcwd()
 
 def link_file(filename, target_filename = None, hide_file=False):
-	if target_filename != None:
-		target_filename = home_dir + "/" + target_filename
-	else:
-		dirname = os.path.dirname(filename)
-		new_filename = "."+os.path.basename(filename)
-		target_filename = home_dir + "/" + dirname + "/" + new_filename
+    if target_filename != None:
+        target_filename = home_dir + "/" + target_filename
+    else:
+        dirname = os.path.dirname(filename)
+        new_filename = "."+os.path.basename(filename)
+        target_filename = home_dir + "/" + dirname + "/" + new_filename
 
-	if os.path.lexists(target_filename):
-		option = raw_input(target_filename + " already exists. Do you want to erase it? ([y]/n): ")
-		if option == 'n' or option == 'N':
-			print "Skipping..."
-			return
-		else:
-			os.remove(target_filename)
-	
-	os.symlink(git_dir + "/" + filename,target_filename)
+    if os.path.lexists(target_filename):
+        option = raw_input(target_filename + " already exists. Do you want to erase it? ([y]/n): ")
+        if option == 'n' or option == 'N':
+            print "Skipping..."
+            return
+        else:
+            os.remove(target_filename)
+    
+    os.symlink(git_dir + "/" + filename,target_filename)
 
+
+# Initialize submodules
+os.system("git submodule update --init --recursive")
 
 # Copy the configuration
 link_file("gitignore")
@@ -39,14 +42,26 @@ link_file("dircolors")
 
 link_file("minttyrc.dark",".minttyrc")
 
+link_file("vim")
+link_file("emacs.d")
+
 # Change colors in gnome-terminal
-os.system("./gnome-terminal-colors-solarized/install.sh -s dark -p Default")
+import platform
+dist=platform.dist()[0].lower()
+profile='Default'
+if dist == 'fedora':
+    profile='Unnamed'
+
+os.system("./gnome-terminal-colors-solarized/install.sh -s dark -p {0}".format(profile))
 
 # Execute the remapping of the keyboard
-os.system("xmodmap ~/.Xmodmap")
+os.system("echo xmodmap ~/.Xmodmap >> ~/.bashrc")
+os.system("echo source .bash_extensions >> ~/.bashrc")
 
 option = raw_input("Is this a Cygwin environment? ([y]/n): ")
 if option == 'y' or option == 'Y':
-	cmd = "cat " + git_dir + "/sol.dark >> " + home_dir + "/.bash.local"
-	print cmd
-	#os.system(cmd)
+    cmd = "cat " + git_dir + "/sol.dark >> " + home_dir + "/.bash.local"
+    print cmd
+    os.system(cmd)
+
+

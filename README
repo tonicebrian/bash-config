@@ -8,3 +8,5 @@ For instance:
 
 cp -r config/* $HOME/.config
 
+Note. Running Fedora requires to install ncurses-term for tmux to work properly
+
