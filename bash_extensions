@@ -12,6 +12,7 @@ eval `dircolors $HOME/.dircolors`
 
 # Solve problems with colors in tmux
 alias tmux="TERM=screen-256color-bce tmux"
+alias git="LC_ALL=C git"
 
 # And the back to plain xterm because of some color problems with emacs -nw
 export TERM=xterm
