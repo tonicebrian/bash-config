@@ -4,7 +4,7 @@ export PATH=$HOME/bin:$HOME/.cabal/bin:$HOME/.local/bin:$PATH:
 export PROMPT_DIRTRIM=4
 
 # Meaningful error results
-export LC_ALL="en_EN.UTF-8"
+export LC_ALL="en_US.UTF-8"
 
 # Use the dircolors that work with solarized
 # ln -s ~/GIT/bash-config/dircolors.ansi-dark $HOME/.dircolors
@@ -12,7 +12,7 @@ eval `dircolors $HOME/.dircolors`
 
 # Solve problems with colors in tmux
 alias tmux="TERM=screen-256color-bce tmux"
-alias git="LC_ALL=en_EN.UTF-8 git"
+alias git="LANGUAGE=en_US.UTF-8 git"
 
 # And the back to plain xterm because of some color problems with emacs -nw
 export TERM=xterm
