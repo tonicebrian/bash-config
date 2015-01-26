@@ -56,7 +56,7 @@ os.system("./gnome-terminal-colors-solarized/install.sh -s dark -p {0}".format(p
 
 # Execute the remapping of the keyboard
 os.system("echo xmodmap ~/.Xmodmap >> ~/.bashrc")
-os.system("echo source .bash_extensions >> ~/.bashrc")
+os.system("echo source ~/.bash_extensions >> ~/.bashrc")
 
 option = raw_input("Is this a Cygwin environment? ([y]/n): ")
 if option == 'y' or option == 'Y':

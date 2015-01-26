@@ -12,3 +12,5 @@ cabal.sandbox*
 .classpath
 .project
 .settings
+.ipynb_checkpoints
+build/

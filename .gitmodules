@@ -1,9 +1,12 @@
 [submodule "gnome-terminal-colors-solarized"]
 	path = gnome-terminal-colors-solarized
 	url = https://github.com/sigurdga/gnome-terminal-colors-solarized
+    ignore = dirty
 [submodule "vim"]
 	path = vim
 	url = http://github.com/tonicebrian/vimconfig
+    ignore = dirty
 [submodule "emacs.d"]
 	path = emacs.d
 	url = http://github.com/tonicebrian/emacsconfig
+    ignore = dirty
