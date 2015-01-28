@@ -1,10 +1,13 @@
 #!/usr/bin/python
 
 import os
+import shutil
+import sys
+
 home_dir = os.environ.get("HOME")
 git_dir = os.getcwd()
 
-def link_file(filename, target_filename = None, hide_file=False):
+def link_file(filename, copy_file=False, target_filename = None):
     if target_filename != None:
         target_filename = home_dir + "/" + target_filename
     else:
@@ -20,27 +23,36 @@ def link_file(filename, target_filename = None, hide_file=False):
         else:
             os.remove(target_filename)
     
-    os.symlink(git_dir + "/" + filename,target_filename)
+    if copy_file:
+        shutil.copyfile(git_dir + "/" + filename,target_filename)
+    else:
+        os.symlink(git_dir + "/" + filename,target_filename)
 
 
 # Initialize submodules
 os.system("git submodule update --init --recursive")
 
+# Copy file or create links
+if len(sys.argv) > 1:
+    copy_file=True
+else:
+    copy_file=False
+
 # Copy the configuration
-link_file("gitignore")
-link_file("gitconfig")
-link_file("tmux.conf")
+link_file("gitignore",copy_file)
+link_file("gitconfig",copy_file)
+link_file("tmux.conf",copy_file)
 
-link_file("bash_extensions")
-link_file("dircolors.ansi-dark")
-link_file("git-completion.bash")
-link_file("xmobarrc")
-link_file("Xmodmap")
-link_file("xsession")
+link_file("bash_extensions",copy_file)
+link_file("dircolors.ansi-dark",copy_file)
+link_file("git-completion.bash",copy_file)
+link_file("xmobarrc",copy_file)
+link_file("Xmodmap",copy_file)
+link_file("xsession",copy_file)
 
-link_file("dircolors")
+link_file("dircolors",copy_file)
 
-link_file("minttyrc.dark",".minttyrc")
+link_file("minttyrc.dark",copy_file,".minttyrc")
 
 link_file("vim")
 link_file("emacs.d")
