@@ -14,3 +14,7 @@ cabal.sandbox*
 .settings
 .ipynb_checkpoints
 build/
+.git
+.svn
+.hg
+nbproject
