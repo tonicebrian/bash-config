@@ -18,3 +18,5 @@ build/
 .svn
 .hg
 nbproject
+cache.properties
+.vagrant
