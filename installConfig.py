@@ -77,3 +77,11 @@ if option == 'y' or option == 'Y':
     os.system(cmd)
 
 
+
+print """
+Now you have to setup solarized in your Gnome terminal.Do:
+
+    git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git
+    cd gnome-terminal-colors-solarized
+    ./set_dark.sh
+    """
