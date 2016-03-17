@@ -22,7 +22,7 @@ def link_file(filename, copy_file=False, target_filename = None):
             return
         else:
             os.remove(target_filename)
-    
+
     if copy_file:
         shutil.copyfile(git_dir + "/" + filename,target_filename)
     else:
@@ -57,6 +57,9 @@ link_file("minttyrc.dark",copy_file,".minttyrc")
 link_file("vim")
 link_file("emacs.d")
 
+# Make vim default git editor
+os.system("git config --global core.editor vim")
+
 # Change colors in gnome-terminal
 import platform
 dist=platform.dist()[0].lower()
@@ -75,8 +78,6 @@ if option == 'y' or option == 'Y':
     cmd = "cat " + git_dir + "/sol.dark >> " + home_dir + "/.bash.local"
     print cmd
     os.system(cmd)
-
-
 
 print """
 Now you have to setup solarized in your Gnome terminal.Do:
