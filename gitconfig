@@ -1,32 +1,36 @@
 [core]
     excludesfile = ~/.gitignore
-	autocrlf = input
-	editor = vim
+    autocrlf = input
+    editor = vim
 [user]
-	name = Toni Cebrián
+    name = Toni Cebrián
 [alias]
     co = checkout
     st = status --ignore-submodules=dirty
     ci = commit
     lg = log --oneline --graph
-	cp = cherry-pick -x
-	unstage = reset HEAD
-	uncommit = reset --soft HEAD^
-	bdesc = config
+    cp = cherry-pick -x
+    unstage = reset HEAD
+    uncommit = reset --soft HEAD^
+    bdesc = config
 
 [color]
-	ui = true
+    ui = true
 
 [giggle]
-	main-window-maximized = false
-	main-window-geometry = 638x1005+0+17
-	history-view-vpane-position = 597
-	main-window-view = HistoryView
-	file-view-vpane-position = 905
+    main-window-maximized = false
+    main-window-geometry = 638x1005+0+17
+    history-view-vpane-position = 597
+    main-window-view = HistoryView
+    file-view-vpane-position = 905
 
 [merge]
-	summary=true
+    summary=true
 [push]
-	default = current
+    default = current
+[pull]
+    rebase = true
 [http]
-	sslVerify = false
+    sslVerify = false
+[diff]
+    tool = meld
