@@ -20,3 +20,4 @@ build/
 nbproject
 cache.properties
 .vagrant
+.stack-work
