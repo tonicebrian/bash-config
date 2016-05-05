@@ -79,6 +79,9 @@ if option == 'y' or option == 'Y':
     print cmd
     os.system(cmd)
 
+print "Copying the config folder to $HOME/.config..."
+shutil.copytree(git_dir+"/config", home_dir+"/.config")
+
 print """
 Now you have to setup solarized in your Gnome terminal.Do:
 
