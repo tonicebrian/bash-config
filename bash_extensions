@@ -78,3 +78,5 @@ PROMPT_COMMAND=__prompt_command
 if [ -f ~/.bash.local ]; then
     . ~/.bash.local
 fi
+
+eval "$(direnv hook bash)"
