@@ -35,3 +35,13 @@
     sslVerify = false
 [diff]
     tool = meld
+[gitflow "feature.finish"]
+	keepremote = no
+	squash = yes
+[gitflow "hotfix.finish"]
+	keepremote = no
+[gitflow "release.finish"]
+	keepremote = no
+	squash = no
+[gitflow "path"]
+    hooks = /home/cebrian/Stuart/dsc-common/git-flow-hooks
