@@ -28,7 +28,7 @@
     summary=true
 [push]
     default = current
-    follow-tags=true
+	followTags = true
 [pull]
     rebase = true
 [http]
