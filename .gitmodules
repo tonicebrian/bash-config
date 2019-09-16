@@ -4,9 +4,9 @@
     ignore = dirty
 [submodule "vim"]
 	path = vim
-	url = http://github.com/tonicebrian/vimconfig
+	url = git@github.com:tonicebrian/vimconfig.git
     ignore = dirty
 [submodule "emacs.d"]
 	path = emacs.d
-	url = http://github.com/tonicebrian/emacsconfig
+	url = git@github.com:tonicebrian/emacsconfig.git
     ignore = dirty
