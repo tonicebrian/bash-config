@@ -1,3 +1,6 @@
+.envrc
+.Ds_Store
+.venv
 .idea*
 dist/
 *.swp

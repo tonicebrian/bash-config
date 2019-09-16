@@ -4,7 +4,6 @@
 /usr/lib/gnome-settings-daemon/gnome-fallback-mount-helper &
 
 xrdb -merge .Xresources
-xmodmap $HOME/.Xmodmap
 
 trayer --edge top --align right --SetDockType true --expand true --width 15 --height 18 --transparent true --tint 0x000000 &
 
