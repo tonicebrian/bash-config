@@ -1,4 +1,5 @@
 .java-version
+.cache
 .envrc
 .Ds_Store
 .venv
