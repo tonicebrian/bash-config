@@ -3,6 +3,7 @@
 .envrc
 .Ds_Store
 .venv
+.bigquery
 .idea*
 dist/
 *.swp
@@ -26,3 +27,5 @@ nbproject
 cache.properties
 .vagrant
 .stack-work
+.venv
+.envrc

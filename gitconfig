@@ -4,6 +4,7 @@
     editor = vim
 [user]
     name = Toni Cebrián
+    email = toni.cebrian@gmail.com
 [alias]
     co = checkout
     st = status --ignore-submodules=dirty
@@ -43,5 +44,3 @@
 [gitflow "release.finish"]
 	keepremote = no
 	squash = no
-[gitflow "path"]
-    hooks = /home/cebrian/Stuart/dsc-common/git-flow-hooks

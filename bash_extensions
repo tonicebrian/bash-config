@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:$HOME/.cabal/bin:$HOME/.local/bin:/opt/flyway:$PATH:
+export PATH=$HOME/bin:$HOME/.local/bin:/opt/flyway:$PATH:
 
 # Trim the folder structure when we are deep enough
 export PROMPT_DIRTRIM=4
