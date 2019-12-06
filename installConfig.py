@@ -89,3 +89,11 @@ Now you have to setup solarized in your Gnome terminal.Do:
     cd gnome-terminal-colors-solarized
     ./set_dark.sh
     """
+
+print """
+    Install bashmarks:
+
+    git clone https://github.com/huyng/bashmarks
+    make install
+    source ~/.local/bin/bashmarks.sh
+¨¨¨
