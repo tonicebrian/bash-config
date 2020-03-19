@@ -70,7 +70,7 @@ function __prompt_command()
     fi
  
     # prompt $ or # for root
-    PS1+="\$ "
+    PS1+="\n\$ "
 }
 PROMPT_COMMAND=__prompt_command
 
